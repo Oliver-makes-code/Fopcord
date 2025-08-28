@@ -42,7 +42,9 @@ class FopcordBot(val config: Config) : RelayToDiscord {
 
             val member = message.getAuthorAsMember()
 
-            relayToMinecraft.sendMessageAsPlayer(member.roles.firstOrNull()?.color?.rgb ?: 0xFFFFFF, member.effectiveName, message.content)
+            val color = member.roles.firstOrNull { it.color.rgb != 0 }?.color?.rgb ?: 0xFFFFFF
+
+            relayToMinecraft.sendMessageAsPlayer(color, member.effectiveName, message.content)
         }
 
         GlobalScope.launch {
