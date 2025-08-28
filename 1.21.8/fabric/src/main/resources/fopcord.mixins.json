@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "de.olivermakesco.fopcord.mc1218.fabric.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "Mixin_PlayerList"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

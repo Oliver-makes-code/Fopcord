@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "fopcord",
+  "version": "${version}",
+  "name": "Fopcord",
+  "description": "Fopping around and finding out",
+  "authors": [
+    "Octal"
+  ],
+  "contributors": [
+  ],
+  "contact": {
+  },
+  "license": "MPL-2.0",
+  "icon": "assets/fopcord/icon.png",
+  "depends": {
+    "minecraft": ">=${minecraft_version}",
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": ">=${fapi_version}"
+  },
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "de.olivermakesco.fopcord.mc1218.fabric.FabricInitKt::init"
+      }
+    ]
+  },
+  "mixins": [
+    "fopcord.mixins.json"
+  ]
+}
