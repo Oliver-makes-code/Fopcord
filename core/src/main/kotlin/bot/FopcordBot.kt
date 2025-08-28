@@ -37,7 +37,7 @@ class FopcordBot(val config: Config) : RelayToDiscord {
 
     init {
         bot.on<MessageCreateEvent> {
-            if (message.author?.isBot != false)
+            if (message.author?.isBot != false || message.channelId != config.effectiveChannelId)
                 return@on
 
             val member = message.getAuthorAsMember()
